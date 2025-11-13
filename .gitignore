@@ -1,0 +1,5 @@
+# .gitignore
+day2venv/
+.idea/
+__pycache__/
+*.pyc
