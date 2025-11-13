@@ -1,3 +1,4 @@
+目标：掌握虚拟环境（venv）与包管理（pip、requirements.txt）
 # Python 虚拟环境与包管理
 
 ## 目录
