@@ -2,7 +2,7 @@ from typing import final
 
 from llm_client import LLMClient
 
-API_KEY = "sk-6a2ef267de654bd8b26500d8bd3a5f9b"
+API_KEY = "你的apiKey"
 
 bot = LLMClient(API_KEY,"qwen-plus", "https://dashscope.aliyuncs.com/compatible-mode/v1",0.7)
 
