@@ -5,8 +5,8 @@ from app import api_router
 
 def create_app()->FastAPI:
     app = FastAPI(
-        title="day3.demo",
-        description="day3.demo",
+        title="day03.demo",
+        description="day03.demo",
         version="0.1.0",
         docs_url="/api/v1/docs",
         redoc_url="/api/v1/redoc",

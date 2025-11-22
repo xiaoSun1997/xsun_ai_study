@@ -7,7 +7,7 @@ from app.services.hello_service import HelloService
 
 router = APIRouter(
     prefix = '/api/v1/hello',
-    tags=["day3.demo"]
+    tags=["day03.demo"]
 )
 
 @router.get("/get",summary="get hello")

@@ -5,8 +5,8 @@ from app.api.fetchOneApi import async_router
 
 def create_app()->FastAPI:
     app = FastAPI(
-        title="day4.demo",
-        description="day4.demo",
+        title="day04.demo",
+        description="day04.demo",
         version="0.1.0",
         docs_url="/api/v1/docs",
         redoc_url="/api/v1/redoc",
