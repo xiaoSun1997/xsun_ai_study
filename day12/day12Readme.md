@@ -258,3 +258,16 @@
         
         print("\n\n--- 结束 ---")
 ```
+
+## Qry: yield怎么用，解释一下 yield chunk.choices[0].delta.content
+
+yield 是 Python 中的一个关键字，它的主要作用是将函数转变为生成器（generator）。
+具体来说：
+在带有 yield 的函数中，yield 会返回一个值，并暂停函数的执行。
+当下一次调用该生成器时，函数会从上次 yield 的位置继续执行。
+这使得函数可以逐步产生一系列的值，而不是一次性计算并返回所有结果。
+在你的代码中，yield 出现在 chat_stream 方法里：
+```
+yield chunk.choices[0].delta.content
+```
+这表示 chat_stream 方法是一个生成器函数，它会在每次有新的响应片段（chunk）时，通过 yield 返回这个片段的内容。这样客户端就可以逐步接收和处理数据，实现流式输出的效果。
