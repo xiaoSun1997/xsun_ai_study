@@ -5,24 +5,24 @@
 
 🧩 第1周：Python + FastAPI 基础
 
-    [X] 周一：学习 Python 基础语法、列表、字典、函数
-    [X] 周二：掌握虚拟环境（venv）与包管理（pip、requirements.txt）
-    [X] 周三：学习 FastAPI 基础与路径参数
-    [X] 周四：理解 async/await 异步机制
-    [X] 周五：使用 requests 调用 HTTP 接口
+    [√] 周一：学习 Python 基础语法、列表、字典、函数
+    [√] 周二：掌握虚拟环境（venv）与包管理（pip、requirements.txt）
+    [√] 周三：学习 FastAPI 基础与路径参数
+    [√] 周四：理解 async/await 异步机制
+    [√] 周五：使用 requests 调用 HTTP 接口
 
 🧩 第2周：LLM 调用与 Prompt 工程
 
-    [X] 周一：调用 OpenAI ChatCompletion API
-    [X] 周二：尝试 HuggingFace Transformers Pipeline
-    [X] 周三：学习 Prompt 模板化设计（PromptTemplate）
-    [X] 周四：Few-shot / Chain-of-Thought 提示技巧
-    [X] 周五：封装 LLMClient 类，统一调用接口
+    [√] 周一：调用 OpenAI ChatCompletion API
+    [√] 周二：尝试 HuggingFace Transformers Pipeline
+    [√] 周三：学习 Prompt 模板化设计（PromptTemplate）
+    [√] 周四：Few-shot / Chain-of-Thought 提示技巧
+    [√] 周五：封装 LLMClient 类，统一调用接口
 
 🧩 第3周：LangChain 核心机制
 
-    [ ] 周一：理解 LangChain 基础结构（LLM、Prompt、Chain）
-    [ ] 周二：SequentialChain 实战  
+    [√] 周一：理解 LangChain 基础结构（LLM、Prompt、Chain）
+    [√] 周二：SequentialChain 实战  
         （fix 从 langchain v0.1.0 版本开始，SequentialChain 已被弃用，推荐使用 LangChain Expression Language (LCEL) 来构建链式调用。如果使用的是较新版本的 langchain，建议改用 RunnableSequence 或直接使用管道操作符 | 来连接组件。）
     [ ] 周三：记忆机制（Memory）
     [ ] 周四：学习 TextLoader / PDFLoader
