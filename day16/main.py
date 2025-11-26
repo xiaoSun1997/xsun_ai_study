@@ -6,7 +6,7 @@ from langchain_openai import ChatOpenAI
 
 def main():
     llm = ChatOpenAI(
-        api_key="sk-9288720f661c498da7a5f0def51d2389",
+        api_key="sk-",
         base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
         model="qwen-plus"
     )
