@@ -3,7 +3,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnablePassthrough
 from langchain_openai import ChatOpenAI
 
-
+# 提前需要 在虚拟环境目录当中 pip install "langchain>=0.3.0" langchain-openai
 def main():
     llm = ChatOpenAI(
         api_key="sk-",
