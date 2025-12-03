@@ -26,7 +26,7 @@
         （fix 从 langchain v0.1.0 版本开始，SequentialChain 已被弃用，推荐使用 LangChain Expression Language (LCEL) 来构建链式调用。如果使用的是较新版本的 langchain，建议改用 RunnableSequence 或直接使用管道操作符 | 来连接组件。）
     [√] 周三：记忆机制（Memory）
     [√] 周四：学习 TextLoader / PDFLoader
-    [ ] 周五：Embedding 嵌入模型（SentenceTransformers）
+    [√] 周五：Embedding 嵌入模型（SentenceTransformers）
 
 🧩 第4周：RAG 构建与优化
 
