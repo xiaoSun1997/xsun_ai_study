@@ -1,0 +1,46 @@
+[project]
+name = "rag-pipeline"
+version = "0.1.0"
+description = "A complete RAG pipeline implementation"
+readme = "README.md"
+requires-python = ">=3.10,<4.0"
+dependencies = [
+    "langchain>=0.1.0",
+    "langchain-community>=0.0.10",
+    "langchain-chroma>=0.4.0",
+    "chromadb>=0.4.22",
+    "sentence-transformers>=2.2.2",
+    "transformers>=4.36.0",
+    "torch>=2.1.0",
+    "accelerate>=0.25.0",
+    "pypdf>=3.17.4",
+    "python-dotenv>=1.0.0",
+    "numpy>=1.24.3",
+    "tiktoken>=0.5.1",
+]
+#[project.dependencies]
+#langchain-chroma = {version = ">=0.4.0,<1.0.0", python = ">=3.10"}
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+    "mypy>=1.5.0",
+    "pre-commit>=3.0.0",
+]
+gpu = [
+    "torch>=2.1.0",
+    "bitsandbytes>=0.41.3",
+    "flash-attn>=2.3.3",
+]
+api = [
+    "fastapi>=0.104.1",
+    "uvicorn>=0.24.0",
+    "pydantic>=2.5.0",
+]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
