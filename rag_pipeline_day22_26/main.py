@@ -133,9 +133,9 @@ def main():
 if __name__ == "__main__":
     main()
 
-# (venv) PS E:\code\xsun_ai_study\rag_pipeline> python main.py --mode test
+# (venv) PS E:\code\xsun_ai_study\rag_pipeline_day22_26> python main.py --mode test
 # 2025-12-09 19:36:21,472 - __main__ - INFO - 初始化RAG管道...
-# 2025-12-09 19:36:21,472 - rag_pipeline - INFO - 初始化RAG管道组件...
+# 2025-12-09 19:36:21,472 - rag_pipeline_day22_26 - INFO - 初始化RAG管道组件...
 # 2025-12-09 19:36:21,473 - embedding_model - INFO - 正在加载嵌入模型: BAAI/bge-small-zh-v1.5
 # 2025-12-09 19:36:21,477 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: BAAI/bge-small-zh-v1.5
 # Batches: 100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:00<00:00, 36.32it/s]
@@ -144,12 +144,12 @@ if __name__ == "__main__":
 # 2025-12-09 19:36:26,458 - generator - INFO - 加载生成模型: gpt2 (设备: cpu)
 # `torch_dtype` is deprecated! Use `dtype` instead!
 # 2025-12-09 19:36:28,918 - generator - INFO - 生成模型加载完成
-# 2025-12-09 19:36:28,969 - rag_pipeline - INFO - RAG管道初始化完成
+# 2025-12-09 19:36:28,969 - rag_pipeline_day22_26 - INFO - RAG管道初始化完成
 # 2025-12-09 19:36:28,970 - __main__ - INFO - 管道信息: {'pipeline_components': {'document_processor': 'active', 'vector_store': 'active', 'retriever': 'active', 'generator': 'active'}, 'vector_store_stats': {'collection_name': 'knowledge_base', 'document_count': 50, 'embedding_dimension': 512, 'persist_directory': './vector_store'}, 'config': {'embedding_model': 'BAAI/bge-small-zh-v1.5', 'generation_model': 'gpt2', 'retrieval_top_k': 3, 'chunk_size': 500}}
 #
 # ============================================================
 # 测试查询: 什么是余弦相似度?
-# 2025-12-09 19:36:28,970 - rag_pipeline - INFO - 处理查询: 什么是余弦相似度?
+# 2025-12-09 19:36:28,970 - rag_pipeline_day22_26 - INFO - 处理查询: 什么是余弦相似度?
 # 2025-12-09 19:36:28,970 - retriever - INFO - 检索查询: 什么是余弦相似度?
 # 2025-12-09 19:36:29,383 - retriever - INFO - 向量检索返回 6 个原始结果
 # 2025-12-09 19:36:29,384 - retriever - INFO - 阈值过滤后剩余 6 个结果 (阈值: 0.3)
@@ -211,7 +211,7 @@ if __name__ == "__main__":
 #     问题：什么是余弦相似度?
 #
 #     请基于上述上下文信息回答：
-# 2025-12-09 19:36:56,379 - rag_pipeline - INFO - 查询处理完成，使用 3 个上下文
+# 2025-12-09 19:36:56,379 - rag_pipeline_day22_26 - INFO - 查询处理完成，使用 3 个上下文
 # 回答: x = x / x
 #
 # [上下文 3]: # 音乐家：增加肺活量同时稳定发声（声乐教师秘传）          x = x / x
@@ -225,7 +225,7 @@ if __name__ == "__main__":
 #
 # ============================================================
 # 测试查询: 向量是什么？
-# 2025-12-09 19:36:56,380 - rag_pipeline - INFO - 处理查询: 向量是什么？
+# 2025-12-09 19:36:56,380 - rag_pipeline_day22_26 - INFO - 处理查询: 向量是什么？
 # 2025-12-09 19:36:56,380 - retriever - INFO - 检索查询: 向量是什么？
 # 2025-12-09 19:36:56,649 - retriever - INFO - 向量检索返回 6 个原始结果
 # 2025-12-09 19:36:56,649 - retriever - INFO - 阈值过滤后剩余 6 个结果 (阈值: 0.3)
@@ -247,7 +247,7 @@ if __name__ == "__main__":
 #     问题：向量是什么？
 #
 #     请基于上述上下文信息回答：
-# 2025-12-09 19:37:19,872 - rag_pipeline - INFO - 查询处理完成，使用 3 个上下文
+# 2025-12-09 19:37:19,872 - rag_pipeline_day22_26 - INFO - 查询处理完成，使用 3 个上下文
 # 回答: 向量的多转和
 #
 # [上下文 3]: # 心朋达池记＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝...
@@ -255,7 +255,7 @@ if __name__ == "__main__":
 #
 # ============================================================
 # 测试查询: ANN是什么？
-# 2025-12-09 19:37:19,872 - rag_pipeline - INFO - 处理查询: ANN是什么？
+# 2025-12-09 19:37:19,872 - rag_pipeline_day22_26 - INFO - 处理查询: ANN是什么？
 # 2025-12-09 19:37:19,872 - retriever - INFO - 检索查询: ANN是什么？
 # 2025-12-09 19:37:20,243 - retriever - INFO - 向量检索返回 6 个原始结果
 # 2025-12-09 19:37:20,244 - retriever - INFO - 阈值过滤后剩余 6 个结果 (阈值: 0.3)
@@ -277,6 +277,6 @@ if __name__ == "__main__":
 #     问题：ANN是什么？
 #
 #     请基于上述上下文信息回答：
-# 2025-12-09 19:37:46,357 - rag_pipeline - INFO - 查询处理完成，使用 3 个上下文
+# 2025-12-09 19:37:46,357 - rag_pipeline_day22_26 - INFO - 查询处理完成，使用 3 个上下文
 # 回答: [上下文 3]: # 页码: 3...
 # 检索到 3 个上下文
