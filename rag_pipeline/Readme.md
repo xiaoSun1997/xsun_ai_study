@@ -12,4 +12,9 @@ rag_pipeline/
 ├── requirements.txt
 └── main.py              # 主程序
 ```
-添加依赖
+添加依赖  
+
+    pip install poetry 
+    poetry install 
+
+    python main.py --mode test 

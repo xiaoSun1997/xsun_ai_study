@@ -18,7 +18,7 @@ class StopOnTokens(StoppingCriteria):
     """自定义停止条件"""
 
     def __call__(self, input_ids: torch.LongTensor, scores: torch.FloatTensor, **kwargs) -> bool:
-        stop_ids = [tokenizer.eos_token_id]
+        stop_ids = [self.tokenizer.eos_token_id]
         for stop_id in stop_ids:
             if input_ids[0][-1] == stop_id:
                 return True
@@ -46,6 +46,9 @@ class ResponseGenerator:
         if self.tokenizer.pad_token is None:
             self.tokenizer.pad_token = self.tokenizer.eos_token
 
+        # 获取模型最大序列长度
+        self.max_model_length = self.model.config.max_position_embeddings if hasattr(self.model.config, 'max_position_embeddings') else 1024
+
         logger.info("生成模型加载完成")
 
     def generate(
@@ -68,12 +71,20 @@ class ResponseGenerator:
             prompt,
             return_tensors="pt",
             truncation=True,
-            max_length=2048 - max_length  # 留出生成空间
         ).to(self.device)
+        
+        # 确保输入不会超过模型的最大长度
+        input_ids = inputs["input_ids"]
+        if input_ids.shape[1] > self.max_model_length - max_length:
+            # 截断输入以适应模型限制
+            max_input_length = self.max_model_length - max_length
+            input_ids = input_ids[:, -max_input_length:]
+            inputs["input_ids"] = input_ids
+            inputs["attention_mask"] = inputs["attention_mask"][:, -max_input_length:]
 
         # 生成参数
         generation_config = {
-            "max_new_tokens": max_length,
+            "max_new_tokens": min(max_length, self.max_model_length - input_ids.shape[1]),
             "temperature": temperature,
             "top_p": top_p,
             "do_sample": do_sample,
