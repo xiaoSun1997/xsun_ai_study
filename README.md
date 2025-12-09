@@ -30,10 +30,10 @@
 
 🧩 第4周：RAG 构建与优化
 
-    [ ] 周一：向量数据库原理（相似度检索）
-    [ ] 周二：Chroma 基础与索引
-    [ ] 周三：实现 RAG Pipeline（Embedding + Retrieval + Generation）
-    [ ] 周四：优化 top-k 检索策略
+    [√] 周一：向量数据库原理（相似度检索）
+    [√] 周二：Chroma 基础与索引
+    [√] 周三：实现 RAG Pipeline（Embedding + Retrieval + Generation）
+    [√] 周四：优化 top-k 检索策略
     [ ] 周五：回答准确率测试
     [ ] 周末项目：✅ 文档问答Bot（RAG 系统）
 
