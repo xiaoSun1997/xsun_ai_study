@@ -3,3 +3,8 @@ day2venv/
 .idea/
 __pycache__/
 *.pyc
+/day23/chroma_db/8d67cd70-3d73-4ae0-8570-6a6280b0c935/data_level0.bin
+*.bin
+*.sqlite3
+chroma_db/
+.DS_Store
