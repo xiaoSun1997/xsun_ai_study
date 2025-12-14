@@ -34,8 +34,7 @@
     [√] 周二：Chroma 基础与索引
     [√] 周三：实现 RAG Pipeline（Embedding + Retrieval + Generation）
     [√] 周四：优化 top-k 检索策略
-    [ ] 周五：回答准确率测试
-    [ ] 周末项目：✅ 文档问答Bot（RAG 系统）
+    [√] 周五：回答准确率测试
 
 📘 阶段 2：Agent 架构与 Java 整合（第 5–8 周）
 🎯 目标：掌握 Agent 架构、多工具协作、LangChain4j 后端整合。
