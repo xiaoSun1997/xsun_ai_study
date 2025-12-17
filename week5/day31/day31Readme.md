@@ -449,3 +449,14 @@ print(f"工具描述: {tool.description}")
 ```
 
 
+## DEMO PROBLEM 
+1. ValueError: ZeroShotAgent does not support multi-input tool Calculator.
+AgentType.ZERO_SHOT_REACT_DESCRIPTION 不支持多参数输入的工具。你自定义的 CalculatorTool 需要接收三个参数（num1, num2, operation），这超出了该代理类型的处理能力。
+
+🔍 问题根源与解决方案对比
+以下是两种主要的解决方案，你可以根据实际情况选择：
+
+方案	|核心思路|	优点|	缺点
+--|--|--|--
+方案一：切换代理类型	|将代理类型更换为支持多参数输入的工具，如 STRUCTURED_CHAT_ZERO_SHOT_REACT_DESCRIPTION。|	改动最小，仅需修改一行代码即可让当前代码运行。|	仍然是基于旧版Agent API的临时方案，存在被废弃的风险。
+方案二：使用新版API重构|	遵循LangChain官方建议，弃用旧版 initialize_agent，改用基于 LCEL 或 LangGraph 的新方案构建代理。	|官方推荐，性能更优，功能更灵活，是未来的发展方向。	|需要重新学习并编写更多代码。
