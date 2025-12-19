@@ -1,4 +1,5 @@
 from langchain_core.tools import BaseTool
+from typing import Type
 
 from model.StockPriceInput import StockPriceInput
 
@@ -7,10 +8,10 @@ class StockPriceTool(BaseTool):
     """
     获取股票价格信息（模拟数据）
     """
-    name = "stock_price_lookup"
-    description = """ 查询股票价格信息。输入股票代码和时间范围。
+    name: str = "stock_price_lookup"
+    description: str = """ 查询股票价格信息。输入股票代码和时间范围。
     可以获取当前价格、涨跌幅等信息。"""
-    args_schema = StockPriceInput
+    args_schema: Type[StockPriceInput] = StockPriceInput
 
     _mock_stock_data = {
         "AAPL": {"price": 175.25, "change": 1.5, "change_percent": 0.86},
