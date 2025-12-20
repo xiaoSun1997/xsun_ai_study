@@ -41,12 +41,11 @@
 
 🧩 第5周：LangChain Agent 基础
 
-    [ ] 周一：理解 Agent 结构（LLM + Tool + Executor）
-    [ ] 周二：使用内置工具（PythonREPL、Search API）
-    [ ] 周三：自定义 Tool 函数
-    [ ] 周四：多工具组合执行链
-    [ ] 周五：Agent 错误恢复与回退策略
-    [ ] 周末项目：✅ 天气 + 搜索 + 计算 Agent
+    [√] 周一：理解 Agent 结构（LLM + Tool + Executor）
+    [√ ] 周二：使用内置工具（PythonREPL、Search API）
+    [ √] 周三：自定义 Tool 函数
+    [√ ] 周四：多工具组合执行链
+    [√ ] 周五：Agent 错误恢复与回退策略
 
 🧩 第6周：多 Agent 协作
 
