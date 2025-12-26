@@ -3,7 +3,7 @@ from langchain_core.tools import Tool
 from langchain_openai import ChatOpenAI
 
 llm = ChatOpenAI(model="qwen-plus-latest",
-                 api_key="sk-6961606ca1bf484d9229fd6f15af8b20",
+                 api_key="sk-YOUR-key",
                  base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
                  temperature=0.7)
 
