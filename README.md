@@ -49,12 +49,11 @@
 
 🧩 第6周：多 Agent 协作
 
-    [ ] 周一：多Agent架构（Coordinator + Worker 模式）
-    [ ] 周二：了解 LangGraph（流程化控制）
-    [ ] 周三：组合多个工具链
-    [ ] 周四：外部API封装（NewsAPI、Google Search）
-    [ ] 周五：Agent 通信与上下文共享
-    [ ] 周末项目：✅ 智能任务管家（多Agent协作系统）
+    [√] 周一：多Agent架构（Coordinator + Worker 模式）
+    [√] 周二：了解 LangGraph（流程化控制）
+    [√] 周三：组合多个工具链
+    [√] 周四：外部API封装（NewsAPI、Google Search）
+    [√] 周五：Agent 通信与上下文共享
 
 🧩 第7周：LangChain4j 入门（Java）
 
